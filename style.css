@@ -158,6 +158,15 @@ div#timeline{
   border-radius: 100%;
 }
 
+/* IMAGE */
+div#image{
+  padding: 80px 0 80px 0;
+  background-color: #fff;
+}
+.instagram-media {
+  margin: 30px auto !important;
+}
+
 /* FOOTER*/
 footer{
   margin: 0;
