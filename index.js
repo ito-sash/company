@@ -1,4 +1,28 @@
 window.addEventListener('load', function () {
+
+  // ===== 作業風景ギャラリー =====
+  // 📌 写真が増えたらこの配列にファイル名を追加するだけでOK
+  var workImages = [
+    'wc_01.jpg',
+    'wc_02.jpg',
+    'wc_03.jpg',
+    'wc_04.jpg',
+    'wc_05.jpg',
+  ];
+
+  var grid = document.getElementById('worksGrid');
+  if (grid) {
+    workImages.forEach(function (file, i) {
+      var item = document.createElement('div');
+      item.className = 'works-item';
+      var img = document.createElement('img');
+      img.src = './image/work_scene/' + file;
+      img.alt = '作業風景' + (i + 1);
+      img.loading = 'lazy';
+      item.appendChild(img);
+      grid.appendChild(item);
+    });
+  }
   // ===== ナビゲーション スムーズスクロール =====
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
